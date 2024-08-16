@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(https://cdn.wallpapersafari.com/67/31/GIOUpf.jpg);">
+<div class="container">
+        <h1 class="title">Tic-Tac-Toe</h1>
+
+        <div class="player-names">
+            <input type="text" id="playerXName" placeholder="Enter Player X's Name" />
+            <input type="text" id="playerOName" placeholder="Enter Player O's Name" />
+        </div>
+
+        <div class="controls">
+            <button id="gameModeBtn">Switch to Player vs AI</button>
+            <button id="difficultyBtn">AI Difficulty: Easy</button>
+            <button id="restartBtn">Restart Game</button>
+            <button id="musicBtn">Toggle Music</button>
+        </div>
+
+        <div class="timer">
+            <span id="timer">00:00</span>
+        </div>
+
+        <center><div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div></center>
+
+        <div class="scoreboard">
+            <div id="scoreX">Player X: 0</div>
+            <div id="scoreO">Player O: 0</div>
+            <div id="draws">Draws: 0</div>
+        </div>
+
+        <div class="message" id="message"></div>
+
+        <div class="game-history">
+            <h2>Game History</h2>
+            <ul id="history"></ul>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="nicky-jam-j-balvin-d0590aee-ef17-4a78-aa57-dfea90c9ac64-63377.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="moveSound">
+        <source src="./move-sound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="winSound">
+        <source src="./win-sound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="drawSound">
+        <source src="./draw-sound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

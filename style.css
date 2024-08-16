@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.player-names input {
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+.controls {
+    margin-top: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.timer {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #f9f9f9;
+}
+
+.cell.winning-line {
+    animation: winAnimation 1s ease-out;
+}
+
+@keyframes winAnimation {
+    0% { background-color: #fff; }
+    50% { background-color: #ffeb3b; }
+    100% { background-color: #fff; }
+}
+
+.scoreboard {
+    margin-top: 1rem;
+}
+
+.scoreboard div {
+    font-size: 1.2rem; 
+    margin: 5px 0;
+}
+
+.message {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #040613;
+}
+
+.game-history {
+    margin-top: 1rem;
+}
+
+.game-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.game-history li {
+    margin: 5px 0;
+}
